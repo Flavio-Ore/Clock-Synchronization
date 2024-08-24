@@ -1,48 +1,51 @@
-# Sincronización del reloj usando el algoritmo de Christian
+# Clock synchronization using Christian's algorithm method 
 
-Tarea del curso de Sistemas Distribuidos para sincronizar el reloj del servidor con el cliente usando el algoritmo de Christian.
-[Video demostración](https://www.canva.com/design/DAGOzs7n6dw/saIhZ3vpTWiQYSG-lECSRA/edit?utm_content=DAGOzs7n6dw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) hecho en Canva.
+Distributed Systems course assignment to synchronize the server clock with the client using Christian's algorithm.
+
+The Demo run the server in a Linux Mint laptop using python3 and the client in a Windows 10 desktop using nodejs.
+[Video demo](https://www.canva.com/design/DAGOzs7n6dw/saIhZ3vpTWiQYSG-lECSRA/edit?utm_content=DAGOzs7n6dw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) made in Canva.
 
 ## Setup
 ```bash
 git clone https://github.com/Flavio-Ore/Clock-Synchronization.git
-cd .\Clock-Synchronization\
+cd .Clock-Synchronization
 ```
 
 ## Server side
-Se recomienda ejecutar el servidor en una máquina diferente pero que estén en la misma LAN.
+> [!TIP]
+> It is recommended to run the server on a different machine but on the same LAN.
 
-### Para el servidor Python
-Necesitas tener instalado Python versión `3.11.X`
+### For the Python server
+It is necessary to have the `3.11.X` version of Python installed.
 
-Procedemos a entrar a la carpeta y ejecutar el servidor reloj.
+We proceed to enter the folder and run the server clock.
 ```bash
-cd .\server
+cd .server
 python3 main.py
 ```
 
 ## Client side
-Dependiendo del cliente que desees usar.
-EL cliente python mostrará los resultados en la consola.
-El cliente nodejs crea un servidor http y servirá una página `index.html` que consume la API que se comunica con el servidor reloj en python.
+Depending on the client you want to use.
+The python client will display the results in the console.
+The nodejs client creates an http server and will serve an `index.html` page that consumes the API that communicates with the clock python server.
 
-### Para el cliente Nodejs
-Necesitas tener intalado Nodejs versión `v20.X.X` y npm versión `10.X.X`.
+### For the Nodejs client
+You need to have `v20.X.X.X` version of Nodejs and `10.X.X` version of npm installed.
 
 ```bash
-cd .\client\nodejs
+cd .\client Nodejs
 ```
 
-Instalas las dependencias con `npm i`
+Install the dependencies with `npm i`.
 
-Para ejecutar el servidor cliente
+To run the client server
 ```bash
 node --watch .\server.cjs
 ```
 
-### Para el cliente Python3
-Necesitas tener instalado Python versión `3.11.X` y pip versión `24.X.X`
-Este módulo requiere levantar un "virtual environment".
+### For the Python3 client
+You need to have Python version ``3.11.X`` and pip version ``24.X.X.X`` installed.
+This module requires to raise a ``virtual environment``.
 
 ```bash
 cd .\client\python\
@@ -53,5 +56,5 @@ py -m venv venv
 (venv) python main.py
 ```
 
-## Otras fuentes de información
-- [Cristian’s Algorithm](https://www.geeksforgeeks.org/cristians-algorithm/)
+## Other sources of information
+- [Cristian's algorithm - geeksforgeeks](https://www.geeksforgeeks.org/cristians-algorithm/)
